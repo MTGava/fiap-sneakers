@@ -1,6 +1,18 @@
+import ItemSneaker from "@/components/ItemSneaker";
 import Title from "@/components/Title";
 
 export default function Home() {
+  
+  const sneakers = [
+    {
+      titulo: "Nike AF1",
+      dia: "03",
+      mesAno: "Abr/23",
+      imagem: "https://place-hold.it/40x40/666"
+    }
+  ]
+  
+
   return (
     <>
       <nav
@@ -34,23 +46,15 @@ export default function Home() {
       <Title>Lançamento</Title>
       <Title>Vistos recentemente</Title>
 
-      <div className="p-20 bg-neutral-100">
-        <a href="">
-          <div
-            id="card"
-            className="flex flex-row w-40 justify-center items-center"
-          >
-            <div className="flex flex-col">
-              <span>03</span>
-              <span>Abr/23</span>
-            </div>
-            <img src="https://place-hold.it/40x40/666" alt="" />
-            <span className="font-bold text-center line-clamp-1">
-              Nome do tênis
-            </span>
-          </div>
-        </a>
-      </div>
+
+      <section className="flex flex-wrap p-20 bg-neutral-100">
+      
+      {sneakers.map((sneaker) => {
+        return <ItemSneaker sneaker={sneaker}/>
+      })}
+      
+      </section>
+      
     </>
   );
 }
