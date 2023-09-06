@@ -44,9 +44,7 @@ export default function Home() {
         </ul>
       </nav>
       <Title>Lançamento</Title>
-      <Title>Vistos recentemente</Title>
-
-
+     
       <section className="flex flex-wrap p-20 bg-neutral-100">
       
       {sneakers.map((sneaker) => {
