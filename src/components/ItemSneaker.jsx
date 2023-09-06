@@ -9,45 +9,20 @@ export default function ItemSneaker({ sneaker }) {
   return (
     <>
       <div>
-        {selecionado ? (
-          <div
-            onClick={() => setSelecionado(false)}
-            className="cursor-pointer bg-rose-600"
-          >
-            <div
-              id="card"
-              className="flex flex-row w-40 m-2 justify-center items-center"
-            >
-              <div className="flex flex-col">
-                <span>{sneaker.dia}</span>
-                <span>{sneaker.mesAno}</span>
-              </div>
-              <img src={sneaker.imagem} alt="" />
-              <span className="font-bold text-center line-clamp-1">
-                {sneaker.titulo}
-              </span>
-            </div>
+        <div
+          onClick={() => setSelecionado(!selecionado)}
+          id="card"
+          className={`cursor-pointer border-2 hover:border-t-4 rounded-md p-1 font-bold text-slate-600 ${selecionado ? "border-rose-600" : "border-slate-600"} flex flex-row m-2 justify-center items-center`}
+        >
+          <div className="flex flex-col">
+            <span className="text-center">{sneaker.dia}</span>
+            <span>{sneaker.mesAno}</span>
           </div>
-        ) : (
-          <div
-            onClick={() => setSelecionado(true)}
-            className="cursor-pointer"
-          >
-            <div
-              id="card"
-              className="flex flex-row w-40 m-2 justify-center items-center"
-            >
-              <div className="flex flex-col">
-                <span>{sneaker.dia}</span>
-                <span>{sneaker.mesAno}</span>
-              </div>
-              <img src={sneaker.imagem} alt="" />
-              <span className="font-bold text-center line-clamp-1">
-                {sneaker.titulo}
-              </span>
-            </div>
-          </div>
-        )}
+          <img className="pl-1 pr-1" src={sneaker.imagem} alt="" />
+          <span className="text-center line-clamp-1">
+            {sneaker.titulo}
+          </span>
+        </div>
       </div>
     </>
   );

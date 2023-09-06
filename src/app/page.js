@@ -1,8 +1,16 @@
 import ItemSneaker from "@/components/ItemSneaker";
 import Title from "@/components/Title";
 
-export default function Home() {
-  
+async function carregarApi() {
+  const url = "https://api.themoviedb.org/3/trending/movie/week?api_key=1e922667481ab207d642450b0efb461e"
+  const resposta = await fetch(url)
+  const json = await resposta.json()
+  console.log(json)
+  return json.results
+}
+
+export default async function Home() {
+  carregarApi()
   const sneakers = [
     {
       titulo: "Nike AF1",

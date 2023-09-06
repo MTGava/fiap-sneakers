@@ -1,0 +1,14 @@
+{
+    "sneakers": [
+        {
+            "id": 1,
+            "title": "test 1",
+            "author": "typicode"
+        },
+        {
+            "id": 2,
+            "title": "test 2",
+            "author": "typicode"
+        }
+    ]
+}
