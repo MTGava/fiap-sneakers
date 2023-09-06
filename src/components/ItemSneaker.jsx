@@ -12,7 +12,7 @@ export default function ItemSneaker({ sneaker }) {
         <div
           onClick={() => setSelecionado(!selecionado)}
           id="card"
-          className={`cursor-pointer border-2 hover:border-t-4 rounded-md p-1 font-bold text-slate-600 ${selecionado ? "border-rose-600" : "border-slate-600"} flex flex-row m-2 justify-center items-center`}
+          className={`cursor-pointer border-2 hover:border-t-4 rounded-md p-1 font-bold  ${selecionado ? "text-rose-600 border-rose-600" : "text-slate-600 border-slate-600"} flex flex-row m-2 justify-center items-center`}
         >
           <div className="flex flex-col">
             <span className="text-center">{sneaker.dia}</span>
