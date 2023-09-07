@@ -12,15 +12,15 @@ export default function ItemSneaker({ sneaker }) {
         <div
           onClick={() => setSelecionado(!selecionado)}
           id="card"
-          className={`cursor-pointer border-2 hover:border-t-4 rounded-md p-1 font-bold  ${selecionado ? "text-rose-600 border-rose-600" : "text-slate-600 border-slate-600"} flex flex-row m-2 justify-center items-center`}
+          className={`w-80 h-20 cursor-pointer border-2 hover:border-t-4 rounded-md p-1 font-bold  ${selecionado ? "text-rose-600 border-rose-600" : "text-neutral-600 border-neutral-600"} flex flex-row m-2 justify-center items-center`}
         >
-          <div className="flex flex-col">
-            <span className="text-center">{sneaker.dia}</span>
-            <span>{sneaker.mesAno}</span>
+          <div className="flex flex-col font-medium">
+            <span className="text-center">{sneaker.day}</span>
+            <span>{sneaker.monthYear}</span>
           </div>
-          <img className="pl-1 pr-1" src={sneaker.imagem} alt="" />
-          <span className="text-center line-clamp-1">
-            {sneaker.titulo}
+          <img className="pl-1 pr-1 w-20 h-20" src={sneaker.imageSrc} alt="" />
+          <span className="text-center line-clamp-1 block">
+            {sneaker.name}
           </span>
         </div>
       </div>
