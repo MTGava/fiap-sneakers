@@ -2,15 +2,17 @@
 
 import { useState } from "react";
 import { HeartIcon } from "@heroicons/react/24/outline";
+import useSelecionar from "@/hooks/sneakers";
 
 export default function ItemSneaker({ sneaker }) {
-  const [selecionado, setSelecionado] = useState(true);
+
+  const {selecionado, selecionar} = useSelecionar();
 
   return (
     <>
       <div>
         <div
-          onClick={() => setSelecionado(!selecionado)}
+          onClick={() => selecionar(!selecionado, sneaker)}
           id="card"
           className={`w-80 h-20 cursor-pointer border-2 hover:border-t-4 rounded-md p-1 font-bold  ${selecionado ? "text-rose-600 border-rose-600" : "text-neutral-600 border-neutral-600"} flex flex-row m-2 justify-center items-center`}
         >
