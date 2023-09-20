@@ -1,16 +1,27 @@
 import ItemSneaker from "@/components/ItemSneaker";
 import Title from "@/components/Title";
+import Badge from "@/components/Badge";
 
-async function carregarApi() {
+async function carregarSneakersApi() {
   const url = "http://localhost:8080/sneakers"
   const resposta = await fetch(url)
   const json = await resposta.json()
   return json
 }
 
+async function carregarBrandsApi() {
+  const url = "http://localhost:8080/brands"
+  const resposta = await fetch(url)
+  const json = await resposta.json()
+  return json
+}
+
+
 export default async function Home() {
-  // const sneakers = await carregarApi()
-  const sneakers = carregarJson()
+  // const sneakers = await carregarSneakersApi()
+  const sneakers = carregarSneakers()
+  const brands = carregarsBrands()
+
   return (
     <>
       <nav
@@ -41,6 +52,11 @@ export default async function Home() {
         </ul>
       </nav>
 
+      <Title>Marcas</Title>
+      <section className="flex flex-wrap p-20 bg-neutral-100">
+        {brands.map(brand => <Badge brand={brand} />)}
+      </section>
+
       <Title>Lançamentos</Title>
 
       <section className="flex flex-wrap p-20 bg-neutral-100">
@@ -50,7 +66,28 @@ export default async function Home() {
   );
 }
 
-function carregarJson() {
+
+function carregarsBrands() {
+  return [
+    {
+      "name": "Nike",
+      "imageSrc": "https://droper-media.us-southeast-1.linodeobjects.com/166202253219512.webp"
+    },
+    {
+      "name": "Air Jordan",
+      "imageSrc": "https://droper-media.us-southeast-1.linodeobjects.com/166202253016569.webp"
+    },
+    {
+      "name": "Yeezy",
+      "imageSrc": "https://droper-media.us-southeast-1.linodeobjects.com/16620225316960.webp"
+    },
+    {
+      "name": "Adidas",
+      "imageSrc": "https://droper-media.us-southeast-1.linodeobjects.com/166202253538982.webp"
+    }
+  ]
+}
+function carregarSneakers() {
   return [
     {
       "id": 1,

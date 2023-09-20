@@ -106,5 +106,23 @@
       "imageSrc": "https://droper-media.us-southeast-1.linodeobjects.com/192023184816637.webp"
     }
   ],
-  "sneakersSelected": []
+  "sneakersSelected": [],
+  "brands": [
+    {
+      "name": "Nike",
+      "imageSrc": "https://droper-media.us-southeast-1.linodeobjects.com/166202253219512.webp"
+    },
+    {
+      "name": "Air Jordan",
+      "imageSrc": "https://droper-media.us-southeast-1.linodeobjects.com/166202253016569.webp"
+    },
+    {
+      "name": "Yeezy",
+      "imageSrc": "https://droper-media.us-southeast-1.linodeobjects.com/16620225316960.webp"
+    },
+    {
+      "name": "Adidas",
+      "imageSrc": "https://droper-media.us-southeast-1.linodeobjects.com/166202253538982.webp"
+    }
+  ]
 }
