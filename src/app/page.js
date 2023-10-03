@@ -1,6 +1,7 @@
 import ItemSneaker from "@/components/ItemSneaker";
 import Title from "@/components/Title";
 import Badge from "@/components/Badge";
+import NavBar from "@/components/NavBar";
 
 async function carregarSneakersApi() {
   const url = "http://localhost:8080/sneakers"
@@ -18,39 +19,15 @@ async function carregarBrandsApi() {
 
 
 export default async function Home() {
-  // const sneakers = await carregarSneakersApi()
-  const sneakers = carregarSneakers()
-  const brands = carregarsBrands()
+  const sneakers = await carregarSneakersApi()
+  const brands = await carregarBrandsApi()
+  // const sneakers = carregarSneakers()
+  // const brands = carregarsBrands()
 
   return (
     <>
-      <nav
-        className="flex p-4 justify-between
-                    bg-gradient-to-r from-black 
-                    via-black to-rose-800">
-        <ul className="flex items-center gap-20 text-rose-600">
-          <li>
-            <a href="#">
-              <h1 className="font-medium text-3xl">Fiap Sneakers</h1>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <h1>Marcas</h1>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <h1>Novidades</h1>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <h1>Calendário</h1>
-            </a>
-          </li>
-        </ul>
-      </nav>
+  
+      <NavBar/>
 
       <Title>Marcas</Title>
       <section className="flex flex-wrap p-20 bg-neutral-100">

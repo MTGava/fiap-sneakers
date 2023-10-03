@@ -5,7 +5,7 @@ import loginImg from "@/images/login.jpg";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
-
+import { serverLogin } from "@/actions/user";
 
 export default function Login() {
 
@@ -16,6 +16,7 @@ export default function Login() {
     function login(e) {
         e.preventDefault()
         if (email == "matheus@mail.com" && senha == "123") {
+            serverLogin()
             toast.success("login realizado com sucesso")
             push("/")
         } else {

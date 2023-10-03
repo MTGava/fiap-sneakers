@@ -106,7 +106,28 @@
       "imageSrc": "https://droper-media.us-southeast-1.linodeobjects.com/192023184816637.webp"
     }
   ],
-  "sneakersSelected": [],
+  "sneakersSelected": [
+    {
+      "id": 8,
+      "sneaker": {
+        "id": 8,
+        "name": "Nike Air Force 1 Low GS Grey Citron Fuchsia",
+        "day": "5",
+        "monthYear": "set/23",
+        "imageSrc": "https://droper-media.us-southeast-1.linodeobjects.com/592023174428785.webp"
+      }
+    },
+    {
+      "id": 1,
+      "sneaker": {
+        "id": 1,
+        "name": "Fucking Awesome x adidas Samba Black",
+        "day": "9",
+        "monthYear": "set/23",
+        "imageSrc": "https://droper-media.us-southeast-1.linodeobjects.com/492023175837480.webp"
+      }
+    }
+  ],
   "brands": [
     {
       "name": "Nike",
